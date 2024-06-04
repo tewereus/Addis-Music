@@ -8,6 +8,7 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 
 import authRoute from "./routes/authRoute.js";
+import musicRoute from "./routes/musicRoute.js";
 import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
 
 const PORT = process.env.PORT || 8001;
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/music", musicRoute);
 
 app.listen(PORT, (req, res) => {
   console.log(`listening to PORT ${PORT}`);
