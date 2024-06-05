@@ -15,7 +15,12 @@ const PORT = process.env.PORT || 8001;
 const app = express();
 connectDB();
 app.use(morgan("dev"));
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:5173", "http://localhost:3001"],
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());

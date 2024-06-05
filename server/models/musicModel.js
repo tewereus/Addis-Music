@@ -4,35 +4,38 @@ const musicSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
     },
     artist: {
       type: String,
-      required: true,
+      // required: true,
     },
     album: {
       type: String,
-      required: true,
+      // required: true,
     },
     genre: {
       type: String,
-      required: true,
+      // required: true,
     },
     duration: {
       type: Number,
-      required: true,
+      // required: true,
     },
     releaseDate: {
       type: Date,
-      required: true,
+      // required: true,
     },
     coverArt: {
       type: String,
-      required: true,
+      // required: true,
     },
     audioFile: {
       type: String,
-      required: true,
+      // required: true,
+    },
+    url: {
+      type: String,
     },
   },
   {

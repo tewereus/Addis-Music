@@ -14,16 +14,7 @@ const addMusic = asyncHandler(async (req, res) => {
       audioFile,
     } = req.body;
 
-    const newMusic = await Music.create({
-      title,
-      artist,
-      album,
-      genre,
-      duration,
-      releaseDate,
-      coverArt,
-      audioFile,
-    });
+    const newMusic = await Music.create(req.body);
 
     res.status(201).json(newMusic);
   } catch (error) {
@@ -44,8 +35,23 @@ const getMusic = asyncHandler(async (req, res) => {
 
 const getAllMusics = asyncHandler(async (req, res) => {
   try {
-    const musics = await Music.find();
-    res.status(201).json(musics);
+    const queryObj = { ...req.query };
+    const excludeFields = ["page", "limit", "fields"];
+    excludeFields.forEach((el) => delete queryObj[el]);
+    let queryStr = JSON.stringify(queryObj);
+    let query = Music.find(JSON.parse(queryStr));
+    // pagination
+    const page = req.query.page;
+    const limit = req.query.limit;
+    const skip = (page - 1) * limit;
+    query = query.skip(skip).limit(limit);
+    if (req.query.page) {
+      const musicCount = await Music.countDocuments();
+      if (skip >= musicCount) throw new Error("This Page does not exists");
+    }
+    const totalMusics = await Music.countDocuments();
+    const music = await query;
+    res.json({ music, totalMusics });
   } catch (error) {
     throw new Error(error);
   }
