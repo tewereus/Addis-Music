@@ -1,8 +1,10 @@
 This is a music app that allows users to manage their music library. The app includes features such as editing and deleting music, searching for music, and pagination.
+
 Features
 • Editing and Deleting Music: Users can edit and delete music from their library.
 • Searching for Music: Users can search for music by title, artist, album, or genre.
 • Pagination: The app includes pagination to allow users to navigate through their music library.
+
 How to Use
 
 1. Editing and Deleting Music:
