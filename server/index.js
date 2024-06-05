@@ -16,7 +16,7 @@ const app = express();
 connectDB();
 app.use(morgan("dev"));
 const corsOptions = {
-  origin: ["http://localhost:5173"],
+  origin: ["http://addis-music-client.vercel.app"],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
