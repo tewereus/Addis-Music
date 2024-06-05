@@ -53,7 +53,9 @@ const MusicList = () => {
   const handleEdit = (id) => {
     // Fetch the music details from the backend
     axios
-      .get(`http://localhost:7000/api/v1/music/music-detail/${id}`)
+      .get(
+        `https://addis-music-66rj.onrender.com/api/v1/music/music-detail/${id}`
+      )
       .then((response) => {
         const musicDetails = response.data;
         // Open the modal with the music details pre-filled
@@ -87,7 +89,7 @@ const MusicList = () => {
 
       const response = await axios
         .put(
-          `http://localhost:7000/api/v1/music/music-detail/update-music/${musicState.updateId}`,
+          `https://addis-music-66rj.onrender.com/api/v1/music/music-detail/update-music/${musicState.updateId}`,
           data
         )
         .then(() => {
