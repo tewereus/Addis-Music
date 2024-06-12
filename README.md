@@ -46,4 +46,4 @@ How to Use
 
    Contributing
 
-   Contributions are welcome. If you would like to contribute to the app, please create a pull request with your changes.
+Contributions are welcome. If you would like to contribute to the app, please create a pull request with your changes.
