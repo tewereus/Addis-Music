@@ -38,12 +38,12 @@ How to Use
 
    Getting Started
 
-4. Clone the Repository: Clone the repository to your local machine using git clone https://github.com/tewereus/music.git.
+Clone the Repository: Clone the repository to your local machine using git clone https://github.com/tewereus/music.git.
 
-5. Install Dependencies: Install the dependencies by running npm install or yarn install.
+Install Dependencies: Install the dependencies by running npm install or yarn install.
 
-6. Start the Server: Start the server by running node server.js.
+Start the Server: Start the server by running node server.js.
 
-   Contributing
+Contributing
 
-   Contributions are welcome. If you would like to contribute to the app, please create a pull request with your changes.
+Contributions are welcome. If you would like to contribute to the app, please create a pull request with your changes.

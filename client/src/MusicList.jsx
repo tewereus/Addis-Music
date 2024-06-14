@@ -5,6 +5,8 @@ import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import axios from "axios";
 import Modal from "react-modal";
 
+Modal.setAppElement("#root");
+
 const MusicList = () => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
