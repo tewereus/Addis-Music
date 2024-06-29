@@ -38,7 +38,7 @@ How to Use
 
    Getting Started
 
-Clone the Repository: Clone the repository to your local machine using git clone https://github.com/tewereus/music.git.
+Clone the Repository: Clone the repository to your local machine using git clone https://github.com/tewereus/Addis-Music.git.
 
 Install Dependencies: Install the dependencies by running npm install or yarn install.
 
